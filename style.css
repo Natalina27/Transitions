@@ -76,7 +76,9 @@
 .progress4:hover::before,
 .progress5:hover::before,
 .progress6:hover::before,
-.progress7:hover::before{
+.progress7:hover::before,
+.progress8:hover::before,
+.progress9:hover::before{
     width: 100%;
 }
 .progress1::before{
@@ -138,7 +140,7 @@
 }
 .progress8::before{
     transition-timing-function: steps(5, end);
-    /*transition-duration: 1s;*/
+    transition-duration: 1s;
     content: '8.steps(5)';
     position: absolute; /* Абсолютное позиционирование */
     height: 100%; width: 15%;
@@ -146,7 +148,7 @@
 }
 .progress9::before{
     transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    /*transition-duration: 3s;*/
+    transition-duration: 3s;
     content: '9.cubic-bezier(0.1, -0.6, 0.2, 0)';
     position: absolute; /* Абсолютное позиционирование */
     height: 100%; width: 15%;
