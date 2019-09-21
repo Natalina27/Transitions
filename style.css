@@ -1,0 +1,154 @@
+
+/*transition*/
+.bar {
+    top:-3em; right:55em; /* Положение *!*/
+    padding: .5em; /* Поля */
+    margin: 0; /* Отступы */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 2em; /* Ширина */
+    background: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    /* Переход */
+    -webkit-transition: top 1s ease-out 0.5s;
+    -moz-transition: top 1s ease-out 0.5s;
+    -o-transition: top 1s ease-out 0.5s;
+    transition: top 1s ease-out 0.5s;
+}
+.bar:hover {
+    top: 1em;
+}
+
+
+/*transition-property, *transition-duration*/
+.menu {
+    position: relative;
+    height: 100px; width: 100%;
+    background: #ffc0cb;
+    border-bottom: 20px solid #333;
+    top: -100px;
+    /* Анимация */
+    -webkit-transition-property: top;
+    -moz-transition-property: top;
+    -o-transition-property: top;
+    transition-property: top;
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration: 2s;
+}
+.menu:hover {
+    top: 0;
+}
+
+/*transition-timing-function*/
+.progress{
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.progress1,
+.progress2,
+.progress3,
+.progress4,
+.progress5,
+.progress6,
+.progress7,
+.progress8,
+.progress9{
+    background: white; /* Фон */
+    border: 2px solid #333; /* Рамка */
+    height: 40px; /* Высота */
+    position: relative; /* Относительное позиционирование */
+    margin: 5px;
+    box-sizing: border-box;
+    -moz-transition: width 3s;
+    -o-transition: width 3s;
+    -webkit-transition: width 3s;
+    transition: width 3s
+
+}
+.progress1:hover::before,
+.progress2:hover::before,
+.progress3:hover::before,
+.progress4:hover::before,
+.progress5:hover::before,
+.progress6:hover::before,
+.progress7:hover::before{
+    width: 100%;
+}
+.progress1::before{
+    transition-timing-function: linear;
+    transition-duration: 5s;
+    content: '1.linear';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress2::before{
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    content: '2.ease';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress3::before{
+    transition-timing-function: ease-in;
+    transition-duration: 2s;
+    content: '3.ease-in';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress4::before{
+    transition-timing-function: ease-out;
+    transition-duration: 3s;
+    content: '4.ease-out';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress5::before{
+    transition-timing-function: ease-in-out;
+    transition-duration: 4s;
+    content: '5.ease-in-out';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+
+.progress6::before{
+    transition-timing-function: step-start;
+    transition-duration: 5s;
+    content: '6.step-start';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress7::before{
+    transition-timing-function: step-end;
+    transition-duration: 2s;
+    content: '7.step-end';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress8::before{
+    transition-timing-function: steps(5, end);
+    /*transition-duration: 1s;*/
+    content: '8.steps(5)';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
+.progress9::before{
+    transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    /*transition-duration: 3s;*/
+    content: '9.cubic-bezier(0.1, -0.6, 0.2, 0)';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 15%;
+    background: #ffc0cb; /* Фон */
+}
